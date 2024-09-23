@@ -48,13 +48,12 @@ class BBS:
         return self.state
 
     def generate_sequence_and_bits(self, length):
-        sequence = []
-        bits = []
-        for _ in range(length):
-            number = self.next_number()
-            sequence.append(number)
-            bits.append(number % 2)  # Добавляем младший бит текущего состояния
-        return sequence, bits
+        with open("bbs.txt", "w") as f:
+            with open("bbs_bits.txt", "w") as f2:
+                for _ in range(length):
+                    number = self.next_number()
+                    f.write(str(number) + "\n")
+                    f2.write(str(number % 2) + "\n")
 
 
 # Использование
@@ -63,7 +62,4 @@ q = int(input("Введите q"))
 seed = int(input("Введите seed"))
 length = int(input("Введите длинну последовательности"))
 bbs = BBS(p, q, seed)
-
-random_sequence, random_bits = bbs.generate_sequence_and_bits(length)
-print("Псевдослучайные числа:", random_sequence)
-print("Последовательность младших битов:", random_bits)
+bbs.generate_sequence_and_bits(length)
