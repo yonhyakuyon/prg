@@ -3,8 +3,10 @@ A pack of PRSG, contains: Lineral Congruent, Blum-Blum-Shub (BBS),
 
 # Files
 
-* `lineral.py` - Lineral Congruent PRSG
+* `lineral.py` - Lineral Congruent PRSG (Zuev version)
+* `lcg.py` - Lineral Congruent PRSG
 * `bbs.py` - Blum-Blum-Shub PRSG
 * `period.py` - To find period in result (for some generators it realized inside code)
+* `xorshift.py` - Xorshift PRSG
 
 # Lineral Congruent

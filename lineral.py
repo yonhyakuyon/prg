@@ -76,5 +76,5 @@ plt.title("Зависимость длины периода от строки к
 plt.xlabel("Номер строки коэффициентов")
 plt.ylabel("Длина периода")
 plt.grid()
-plt.savefig("period_lengths_plot.png")
+# plt.savefig("period_lengths_plot.png")
 plt.show()
