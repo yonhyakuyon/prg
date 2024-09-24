@@ -36,6 +36,7 @@ steps = int(input("Введите кол-во последов."))
 
 xor = Xorshift(seed, a, b, c, d)
 
-for i in range(steps):
-    with open("xorshift.txt", "w") as f:
-        f.write(str(xor.next()) + "\n")
+with open("xorshift.txt", "w") as f:
+    for _ in range(steps):
+        x = xor.next()
+        f.write(str(x) + "\n")
