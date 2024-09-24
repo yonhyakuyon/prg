@@ -10,3 +10,18 @@ A pack of PRSG, contains: Lineral Congruent, Blum-Blum-Shub (BBS),
 * `xorshift.py` - Xorshift PRSG
 
 # Lineral Congruent
+
+Works by simple math formula `Xn+1=(a * Xn + c) mod m`
+Primitive `for` cycle:
+```
+x = seed
+for n in range(m):
+    x = (a * x + c) % m
+```
+Needs 4 coefficents: `a, seed, c, m` they are inputable
+Also for finding period correctly need to up range to 
+```
+n = 1000000
+for n in range(m):
+...
+```
