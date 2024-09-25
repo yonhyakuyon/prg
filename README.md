@@ -1,5 +1,3 @@
----
-
 # Pseudo-Random Sequence Generators (PRSG)
 
 A collection of PRSGs, including: Linear Congruential Generator, Blum-Blum-Shub (BBS).
@@ -94,5 +92,3 @@ def next(self) -> int:
     return x
 ```
 Additionally, we run the x64 version of the algorithm, which requires the use of the mask `0xFFFFFFFFFFFFFFFF`.
-
----
