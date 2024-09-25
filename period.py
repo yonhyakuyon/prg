@@ -17,7 +17,7 @@ def find_period_from_file(filename):
 
 
 # Выполняем тест
-filename = "result.txt"
+filename = input("Введите имя файла: ")
 period, sequence = find_period_from_file(filename)
 
 # Вывод результатов

@@ -48,12 +48,25 @@ class BBS:
         return self.state
 
     def generate_sequence_and_bits(self, length):
+        sequence = []
+        bits = []
         with open("bbs.txt", "w") as f:
             with open("bbs_bits.txt", "w") as f2:
                 for _ in range(length):
                     number = self.next_number()
+                    # Нормализуем значение
+                    value = number / self.n
+                    sequence.append(value)
+                    bits.append(number % 2)
                     f.write(str(number) + "\n")
                     f2.write(str(number % 2) + "\n")
+        self.stats(sequence)
+
+    def stats(self, sequence):
+        mean_value = sum(sequence) / len(sequence)
+        variance = sum((x - mean_value) ** 2 for x in sequence) / len(sequence)
+        print("Среднее значение: ", mean_value)
+        print("Дисперсия: ", variance)
 
 
 # Использование

@@ -22,7 +22,7 @@ class LCG:
         print("Дисперсия: ", variance)
 
 
-x0 = int(input("Введите Х0: "))
+x0 = int(input("Введите seed: "))
 a = int(input("Введите a: "))
 c = int(input("Введите с: "))
 m = int(input("Введите m: "))
